@@ -151,6 +151,114 @@ public class Game {
     public String checkGameWinner(char [][]grid){
         String result = "None";
         //Student code goes here ...
+        boolean checkXWin = false;
+        boolean checkOWin = false;
+        boolean checkTie = false;
+        int countX, countO;
+        int i;
+        int j;
+        for(i = 0; i < 3; i = i + 1)
+        {
+            countX = 0;
+            countO = 0;
+            for(j = 0; j < 3; j = j + 1)
+            {
+               if(grid[i][j] == 'x')
+               {
+                   countX = countX + 1;
+               }
+               else if(grid[i][j] == 'o')
+               {
+                   countO = countO + 1;
+               }
+               else
+               {
+                   checkTie = true;
+               }
+            }
+            if(countO == 3)
+            {
+               checkOWin = true;
+            }
+            else if(countX == 3)
+            {
+                checkXWin = true;
+            }
+        }
+        for(i = 0; i < 3; i = i + 1)
+        {
+            countX = 0;
+            countO = 0;
+            for(j = 0; j < 3; j = j + 1)
+            {
+                if(grid[j][i] == 'x')
+                {
+                    countX = countX + 1;
+                }
+                else if(grid[j][i] == 'o')
+                {
+                    countO = countO + 1;
+                }
+            }
+            if(countO == 3)
+            {
+                checkOWin = true;
+            }
+            else if(countX == 3)
+            {
+                checkXWin = true;
+            }
+
+        }
+        countX = 0;
+        countO = 0;
+        for(i = 0; i < 3; i = i + 1)
+        {
+            if(grid[i][i] == 'x')
+            {
+                countX = countX + 1;
+            }
+            else if(grid[i][i] == 'o')
+            {
+                countO = countO + 1;
+            }
+            if(countO == 3)
+            {
+                checkOWin = true;
+            }
+            if(countX == 3)
+            {
+                checkXWin = true;
+            }
+        }
+        countX = 0;
+        countO = 0;
+        j=0;
+        for(i = 2; i >= 0; i = i - 1, j = j + 1)
+        {
+            if(grid[i][j] == 'x')
+            {
+                countX = countX + 1;
+            }
+            else if(grid[i][j] == 'o')
+            {
+                countO = countO + 1;
+            }
+            if(countO == 3)
+            {
+                checkOWin = true;
+            }
+            if(countX == 3)
+            {
+                checkXWin = true;
+            }
+        }
+        if(checkOWin )
+            result = "o wins";
+        else if(checkXWin)
+            result = "x wins";
+        else if(!checkTie)
+            result = "tie";
         return result;
     }
 
