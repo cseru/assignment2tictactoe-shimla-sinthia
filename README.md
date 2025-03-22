@@ -61,6 +61,8 @@ gradle run
     <td><img src="AppPreview/gameOnePlayer2.png" alt="Gameplay" width="250"></td>
     <td><img src="AppPreview/gameOnePlayer3.png" alt="Gameplay" width="250"></td>
   </tr>
+</table>
+<table>
   <tr> One player vs Another Player (one wins)</tr>
   <tr>
     <td><img src="AppPreview/gameTwoPlayer1.png" alt="Home Screen" width="250"></td>
@@ -68,6 +70,8 @@ gradle run
     <td><img src="AppPreview/gameTwoPlayer3.png" alt="Gameplay" width="250"></td>
     <td><img src="AppPreview/gameTwoPlayer9.png" alt="Gameplay" width="250"></td>
   </tr>
+</table>
+<table>
   <tr> One player vs Another Player (None wins)</tr>
    <tr>
     <td><img src="AppPreview/gameTwoPlayer2_1.png" alt="Home Screen" width="250"></td>
